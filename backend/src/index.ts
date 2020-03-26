@@ -10,4 +10,5 @@ app.use(express.json())
 
 app.use(routes)
 
-app.listen(3333)
+const PORT = process.env.SERVER_PORT
+app.listen(PORT || 3333)

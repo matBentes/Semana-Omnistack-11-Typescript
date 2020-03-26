@@ -5,7 +5,7 @@ export = {
   development: {
     client: "sqlite3",
     connection: {
-      filename: "/home/matbentes/Desktop/folder/lang/docker/semana-omnistck11/01-conhecendo-a-stack/backend/src/database/db.sqlite"
+      filename: process.env.PATH_DBSQLITE || './src/database/db.sqlite'
     },
     migrations: {
       directory: './database/migrations'
