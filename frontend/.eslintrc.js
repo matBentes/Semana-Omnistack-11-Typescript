@@ -40,5 +40,7 @@ module.exports = {
     '@typescript-eslint/ban-ts-ignore': 0,
     'jsx-a11y/accessible-emoji': 0,
     'no-param-reassign': 0,
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'max-len': 0,
   },
 };

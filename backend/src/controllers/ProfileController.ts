@@ -6,6 +6,12 @@ export async function index (request: Request, response: Response) {
     
     const ong_id = request.headers.authorization
 
+    if(!ong_id) {
+      return response.status(404).json({
+        msg: 'no ID provide in request'
+      })
+    }
+
     const incidents = await connection('incidents')
     .where('ong_id', ong_id)
     .select('*')
