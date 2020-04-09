@@ -6,6 +6,10 @@ import * as SessionCrontoller from './controllers/SessionController'
 
 const routes = Router()
 
+routes.get('/', (req, res) => {
+	res.send('ola mundo')
+})
+
 routes.get('/ongs', OngController.index)
 routes.post('/ongs', OngController.store)
 
